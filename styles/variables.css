@@ -21,7 +21,11 @@
     --main-font-color: #F1B2CE;
     --wrapper-padding: 0 20px;
     --gap-xs: 10px;
+    --gap-s: 20px;
     --title-offset: -20px;
+    --mb-xs: 20px;
+    --mb-m: 60px;
+    --mb-l: 80px;
 
     @media (width < 768px) {
         --wrapper-padding: 0 10px;

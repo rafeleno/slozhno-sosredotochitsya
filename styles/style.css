@@ -181,8 +181,8 @@
 .info-block {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 10px;
-    margin-bottom: 80px;
+    column-gap: var(--gap-xs);
+    margin-bottom: var(--mb-l);
 
     @media (width <= 500px) {
         grid-template-columns: 1fr;
@@ -204,7 +204,7 @@
 }
 
 .info-block-title {
-    margin-bottom: 20px;
+    margin-bottom: var(--mb-xs);
     font-size: var(--main-font-size);
     color: var(--accent-color2);
 }
@@ -216,7 +216,7 @@
 .info-block-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--gap-s);
 }
 
 .info-block__in-a-row .info-block-content{
@@ -231,7 +231,7 @@
 .info-block-content-item {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--gap-xs);
 }
 
 .info-block-content-item-title {
@@ -254,29 +254,29 @@
 }
 
 .gallery {
-    margin-bottom: 60px;
+    margin-bottom: var(--mb-m);
 }
 
 .gallery-content-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 26fr 31fr 43fr;
-    grid-gap: 20px;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-gap: var(--gap-s);
+    grid-column-gap: var(--gap-s);
+    grid-row-gap: var(--gap-s);
     
     @media (width <= 768px) {
-        grid-gap: 10px;
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
+        grid-gap: var(--gap-xs);
+        grid-column-gap: var(--gap-xs);
+        grid-row-gap: var(--gap-xs);
     }
 
     @media (width <= 500px) {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto;
-        grid-gap: 10px;
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
+        grid-gap: var(--gap-xs);
+        grid-column-gap: var(--gap-xs);
+        grid-row-gap: var(--gap-xs);
     }
 }
 
@@ -347,8 +347,8 @@
         height: 1024px;
     }
 
-    @media (width <= 668px) {
-        height: 1024px;
+    @media (width <= 500px) {
+        height: 668px;
     }
 }
 
@@ -371,11 +371,6 @@
     left: 20px;
 
     @media (width <= 768px) {
-        bottom: 0;
-        left: 0;
-    }
-
-    @media (width <= 500px) {
         bottom: 10px;
         left: 10px;
     }
@@ -395,7 +390,7 @@
     right: 20px;
 
     @media (width <= 768px) {
-        top: 0;
+        top: 10px;
         right: 10px;
     }
 }
