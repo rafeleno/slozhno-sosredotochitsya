@@ -12,7 +12,7 @@
     position: relative;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 299px min-content 299px;
-    max-height: 100vh;
+    height: 100vh;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 60px;
@@ -40,7 +40,7 @@
     bottom: 20px;
     left: 20px;
 
-    @media (width <= 768px) {
+    @media (width < 768px) {
         bottom: 0;
         left: 0;
     }
@@ -64,7 +64,7 @@
     top: 20px;
     right: 20px;
 
-    @media (width <= 768px) {
+    @media (width < 768px) {
         top: 0;
         right: 0;
     }
@@ -341,15 +341,7 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    height: 768px;
-
-    @media (width <= 768px) {
-        height: 1024px;
-    }
-
-    @media (width <= 500px) {
-        height: 668px;
-    }
+    height: 100vh;
 }
 
 .footer-title {
