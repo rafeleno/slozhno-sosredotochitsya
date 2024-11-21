@@ -1,5 +1,401 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.header {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 299px min-content 299px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+    @media (width <= 768px) {
+        grid-template-rows: repeat(3, 300px);
+    }
+
+    @media (width <= 500px) {
+        grid-template-rows: 218px min-content 218px;
+        margin-bottom: 40px;
+    }
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: solid var(--accent-color2) 1px;
+    border-top: none;
+    border-right: none;
+    bottom: 20px;
+    left: 20px;
+
+    @media (width <= 768px) {
+        bottom: 0;
+        left: 0;
+    }
+
+    @media (width <= 500px) {
+        bottom: 10px;
+        left: 10px;
+    }
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: solid var(--accent-color2) 1px;
+    border-bottom: none;
+    border-left: none;
+    top: 20px;
+    right: 20px;
+
+    @media (width <= 768px) {
+        top: 0;
+        right: 0;
+    }
+
+    @media (width <= 500px) {
+        top: 10px;
+        right: 10px;
+    }
+}
+.header__accent-element {
+    position: absolute;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    top: 23px;
+    right: 50px;
+
+    @media (width <= 500px) {
+        right: 40px;
+        top: 13px;
+    }
+}
+
+.header__accent-element::after {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background-color: var(--accent-color);
+    border-radius: 100%;
+    fill: var(--accent-color);
+    box-shadow: 0 0 4px 2px var(--accent-color);
+    right: -20px;
+    top: 7px;
+    z-index: 2;
+}
+
+.header__theme-menu {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    justify-self: center ;
+
+    @media (width <= 768px) {
+        grid-column: 4 / auto;
+        justify-self: end;
+        align-self: center;
+    }
+}
+
+.header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-xs);
+
+    @media (width <= 768px) {
+        flex-direction: column;
+    }
+}
+
+.header__theme-menu-button {
+    color: var(--accent-color2);
+    background: none;
+    border: none;
+}
+
+.header__theme-menu-button:hover {
+    outline: 1px solid var(--accent-color2-light);
+    outline-offset: 2px;
+}
+
+.header__theme-menu-button:focus-visible {
+    outline: none;
+    border-bottom: 1px solid var(--accent-color1);
+}
+
+.header__theme-menu-button_active {
+    outline: 1px solid var(--accent-color2);
+    outline-offset: 2px;
+    pointer-events: none
+}
+
+.hero-title {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row: 2 / auto;
+    text-shadow: 4px 4px 0 var(--accent-color1);
+    translate: var(--title-offset);
+    /* не вижу иного способа поставить заголовок менуюя рамку wrapper'а, оставляя его в grid */
+
+    @media (width <= 768px) {
+        translate: var(--title-offset);
+    }
+
+    @media (width <= 500px) {
+        translate: inherit;
+    }
+}
+
+.hero-text {
+    grid-column: 3 / 5;
+    grid-row: 3 / auto;
+    align-self: center;
+    line-height: var(--main-line-height);
+    color: var(--title-color);
+
+    @media (width <= 768px) {
+        align-self: start;
+    }
+
+    @media (width <= 500px) {
+        grid-column: 1 / 5;
+        align-self: center;
+    }
+}
+
+.info-block {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 10px;
+    margin-bottom: 80px;
+
+    @media (width <= 500px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.info-block.info-block__in-a-row .info-block-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (width <= 768px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (width <= 500px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.info-block-title {
+    margin-bottom: 20px;
+    font-size: var(--main-font-size);
+    color: var(--accent-color2);
+}
+
+.info-block__in-a-row .info-block-title{
+    grid-column: 1 / auto;
+}
+
+.info-block-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-block__in-a-row .info-block-content{
+    flex-direction: row;
+    grid-column: 1 / 4;
+    
+    @media (width <= 768px) {
+        flex-direction: column;
+    }
+}
+
+.info-block-content-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-block-content-item-title {
+    color: var(--title-color);
+    font-size: var(--main-font-size);
+}
+
+.info-block-text__link {
+    text-shadow: 0.1rem 0.1rem var(--accent-color1);
+    text-decoration: none;
+}
+
+.info-block-text__link:hover {
+    border-bottom: 1px solid var(--main-font-color);
+}
+
+.info-block-text__link:focus-visible {
+    outline: none;
+    outline: 1px solid var(--main-font-color);
+}
+
+.gallery {
+    margin-bottom: 60px;
+}
+
+.gallery-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 26fr 31fr 43fr;
+    grid-gap: 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    
+    @media (width <= 768px) {
+        grid-gap: 10px;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    @media (width <= 500px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-gap: 10px;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+}
+
+.gallery-list-item {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery-list-item-1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / auto;
+
+    @media (width <= 500px) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+.gallery-list-item-2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+
+    @media (width <= 500px) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+.gallery-list-item-3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+
+    @media (width <= 500px) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+.gallery-list-item-4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    @media (width <= 500px) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+.gallery-list-item-5 {
+    grid-column: 2 / 4;
+    grid-row: 3 / 3;
+
+    @media (width <= 500px) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+.footer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 768px;
+
+    @media (width <= 768px) {
+        height: 1024px;
+    }
+
+    @media (width <= 668px) {
+        height: 1024px;
+    }
+}
+
+.footer-title {
+    text-shadow: 2px 2px 0 var(--accent-color1);
+}
+
+
+.footer::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: solid var(--accent-color2) 1px;
+    border-top: none;
+    border-right: none;
+    bottom: 20px;
+    left: 20px;
+
+    @media (width <= 768px) {
+        bottom: 0;
+        left: 0;
+    }
+
+    @media (width <= 500px) {
+        bottom: 10px;
+        left: 10px;
+    }
+}
+
+.footer::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: solid var(--accent-color2) 1px;
+    border-bottom: none;
+    border-left: none;
+    top: 20px;
+    right: 20px;
+
+    @media (width <= 768px) {
+        top: 0;
+        right: 10px;
+    }
 }

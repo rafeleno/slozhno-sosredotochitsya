@@ -5,8 +5,23 @@
 */
 
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+    --bg-image: url(/images/cover-image-dark.png);
+    --bg-color: #000028;
+    --accent-color1: #FF0070;
+    --accent-color2: #FF0070;
+    --accent-color2-light: rgba(255, 0, 112, 40%);
+    --hero-text-accent-color: #DB00FF;
+    --title-color: #000028;
+    --main-font-color: #F1B2CE;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #000028;
+        --bg-image: url(/images/cover-image-dark.png);
+        --accent-color: #FF0070;
+        --hero-text-accent-color: #DB00FF;
+        --title-color: #000028;
+        --main-font-color: #F1B2CE;
+    }
 }
