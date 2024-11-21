@@ -246,7 +246,7 @@
 
 .info-block-text__link:focus-visible {
     outline: none;
-    outline: 1px solid var(--main-font-color);
+    border: 1px solid var(--main-font-color);
 }
 
 .gallery {
