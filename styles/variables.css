@@ -25,7 +25,7 @@
     --title-offset: -20px;
     --mb-xs: 20px;
     --mb-m: 60px;
-    --mb-l: 80px;
+    --mb-l: 50px;
 
     @media (width < 768px) {
         --wrapper-padding: 0 10px;
