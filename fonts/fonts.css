@@ -2,7 +2,6 @@
   font-family: 'IBM Plex mono';
   src: url(./IBMPlexMono-Bold.woff) format('woff'),
        local('Courier');
-  font-weight: bold;
   font-weight: normal;
   font-display: swap;
 }
