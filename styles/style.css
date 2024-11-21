@@ -1,5 +1,12 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+.page {
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .header {
     display: grid;
     position: relative;
@@ -9,10 +16,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 60px;
-    background-image: var(--bg-image);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    
     @media (width <= 768px) {
         grid-template-rows: repeat(3, 300px);
     }
