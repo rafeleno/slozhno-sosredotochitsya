@@ -16,7 +16,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 60px;
-    
+
     @media (width <= 768px) {
         grid-template-rows: repeat(3, 300px);
     }
@@ -148,7 +148,7 @@
     grid-column-start: 1;
     grid-column-end: 5;
     grid-row: 2 / auto;
-    text-shadow: 4px 4px 0 var(--accent-color1);
+    text-shadow: 4px 4px 0 var(--hero-title-accent-color);
     translate: var(--title-offset);
     /* не вижу иного способа поставить заголовок менуюя рамку wrapper'а, оставляя его в grid */
 

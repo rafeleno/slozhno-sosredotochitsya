@@ -10,7 +10,8 @@
     --accent-color1: #FF0070;
     --accent-color2: #FF0070;
     --accent-color2-light: rgba(255, 0, 112, 40%);
-    --hero-text-accent-color: #DB00FF;
+    --hero-title-color: #DB00FF;
+    --hero-title-accent-color: #FF0070;
     --title-color: #000028;
     --main-font-color: #F1B2CE;
 }

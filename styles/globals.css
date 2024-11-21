@@ -80,7 +80,7 @@ a {
 }
 
 .title {
-    color: var(--hero-text-accent-color);
+    color: var(--hero-title-color);
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: 83%;
 
