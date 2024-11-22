@@ -5,6 +5,10 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-color: var(--bg-color);
+    font-size: var(--main-font-size);
+    font-family: var(--main-font-family);
+    color: var(--main-font-color)
 }
 
 .header {
@@ -27,14 +31,15 @@
     }
 }
 
-.header::before {
+/* Добрый день Владимир Шевченко, взгляните - https://disk.yandex.com/d/JnrZ0QXLwGpXdg (скриншоты на Ядиске)*/
+.decorated-corners::before {
     content: "";
     position: absolute;
     display: block;
     width: 25px;
     height: 25px;
     background-color: transparent;
-    border: solid var(--accent-color2) 1px;
+    border: solid var(--accent-color-light-theme-special) 1px;
     border-top: none;
     border-right: none;
     bottom: 20px;
@@ -50,15 +55,16 @@
         left: 10px;
     }
 }
-
-.header::after {
+/* (Дублирую ответ)
+Добрый день Владимир Шевченко, взгляните - https://disk.yandex.com/d/JnrZ0QXLwGpXdg (скриншоты на Ядиске)*/
+.decorated-corners::after {
     content: "";
     position: absolute;
     display: block;
     width: 25px;
     height: 25px;
     background-color: transparent;
-    border: solid var(--accent-color2) 1px;
+    border: solid var(--accent-color-light-theme-special) 1px;
     border-bottom: none;
     border-left: none;
     top: 20px;
@@ -78,8 +84,8 @@
     position: absolute;
     text-transform: uppercase;
     color: var(--accent-color);
-    top: 23px;
-    right: 50px;
+    top: 22px;
+    right: 49px;
 
     @media (width <= 500px) {
         right: 40px;
@@ -95,8 +101,8 @@
     background-color: var(--accent-color);
     border-radius: 100%;
     fill: var(--accent-color);
-    box-shadow: 0 0 4px 2px var(--accent-color);
-    right: -20px;
+    box-shadow: 0 0 4px 3px var(--accent-color);
+    right: -19px;
     top: 7px;
 }
 
@@ -123,25 +129,40 @@
 }
 
 .header__theme-menu-button {
-    color: var(--accent-color2);
+    color: var(--accent-color-light-theme-special);
     background: none;
     border: none;
 }
 
 .header__theme-menu-button:hover {
-    outline: 1px solid var(--accent-color2-light);
+    outline: 1px solid var(--accent-color-light-theme-special-bright);
     outline-offset: 2px;
 }
 
 .header__theme-menu-button:focus-visible {
     outline: none;
-    border-bottom: 1px solid var(--accent-color1);
+    border-bottom: 1px solid var(--accent-color-light-theme-special);
 }
 
 .header__theme-menu-button_active {
-    outline: 1px solid var(--accent-color2);
+    outline: 1px solid var(--accent-color-light-theme-special);
     outline-offset: 2px;
     pointer-events: none;
+}
+
+.title {
+    color: var(--hero-title-color);
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    line-height: 83%;
+
+    @media (width <= 768px) {
+        font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    }
+}
+
+.title-decor {
+    color: var(--main-color);
+    background-color: var(--accent-color);
 }
 
 .hero-title {
@@ -206,7 +227,7 @@
 .info-block-title {
     margin-bottom: var(--mb-xs);
     font-size: var(--main-font-size);
-    color: var(--accent-color2);
+    color: var(--accent-color-light-theme-special);
 }
 
 .info-block__in-a-row .info-block-title {
@@ -240,7 +261,7 @@
 }
 
 .info-block-text__link {
-    text-shadow: 0.1rem 0.1rem var(--accent-color1);
+    text-shadow: 0.1rem 0.1rem var(--accent-color);
     text-decoration: none;
 }
 
@@ -345,43 +366,5 @@
 }
 
 .footer-title {
-    text-shadow: 2px 2px 0 var(--accent-color1);
-}
-
-.footer::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 25px;
-    height: 25px;
-    background-color: transparent;
-    border: solid var(--accent-color2) 1px;
-    border-top: none;
-    border-right: none;
-    bottom: 20px;
-    left: 20px;
-
-    @media (width <= 768px) {
-        bottom: 10px;
-        left: 10px;
-    }
-}
-
-.footer::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 25px;
-    height: 25px;
-    background-color: transparent;
-    border: solid var(--accent-color2) 1px;
-    border-bottom: none;
-    border-left: none;
-    top: 20px;
-    right: 20px;
-
-    @media (width <= 768px) {
-        top: 10px;
-        right: 10px;
-    }
+    text-shadow: 2px 2px 0 var(--accent-color);
 }

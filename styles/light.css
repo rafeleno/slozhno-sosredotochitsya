@@ -5,15 +5,15 @@
 */
 
 .page.theme_light {
-    --bg-image: url(/images/cover-image-light.png);
+    --bg-image: url(../images/cover-image-light.png);
     --bg-color: #FFF1F7;
-    --accent-color1: #FF8DCB;
-    --accent-color2: #353430;
-    --accent-color2-light: rgba(50, 49, 45, 40%);
+    --accent-color: #FF8DCB;
+    --accent-color-light-theme-special: #353430;
+    --accent-color-light-theme-special-bright: rgba(50, 49, 45, 40%);
     --hero-title-color: #FFC2E6;
     --hero-title-accent-color: #FF0070;
-    --title-color: #353430;
-    --main-font-color: #353430;
+    --title-color: var(--accent-color-light-theme-special);
+    --main-font-color: var(--accent-color-light-theme-special);
 }
 
 .page.theme_light .header__accent-element {
@@ -22,22 +22,18 @@
 
 @media (prefers-color-scheme: light) {
     :root {
-        --bg-image: url(/images/cover-image-light.png);
+        --bg-image: url(../images/cover-image-light.png);
         --bg-color: #FFF1F7;
-        --accent-color1: #FF8DCB;
-        --accent-color2: #353430;
-        --accent-color2-light: rgba(50, 49, 45, 40%);
+        --accent-color: #FF8DCB;
+        --accent-color-light-theme-special: #353430;
+        --accent-color-light-theme-special-bright: rgba(50, 49, 45, 40%);
         --hero-title-color: #FFC2E6;
         --hero-title-accent-color: #FF0070;
-        --title-color: #353430;
-        --main-font-color: #353430;
+        --title-color: var(--accent-color-light-theme-special);
+        --main-font-color: var(--accent-color-light-theme-special);
 
         .header__accent-element {
             display: none;
         }
-    }
-
-    .page.theme_light .header__accent-element {
-        display: none;
     }
 }

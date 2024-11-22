@@ -5,27 +5,27 @@
 */
 
 .page.theme_dark {
-    --bg-image: url(/images/cover-image-dark.png);
+    --bg-image: url(../images/cover-image-dark.png);
     --bg-color: #000028;
-    --accent-color1: #FF0070;
-    --accent-color2: #FF0070;
-    --accent-color2-light: rgba(255, 0, 112, 40%);
+    --accent-color: #FF0070;
+    --accent-color-light-theme-special: var(--accent-color);
+    --accent-color-light-theme-special-bright: rgba(255, 0, 112, 40%);
     --hero-title-color: #DB00FF;
-    --hero-title-accent-color: #FF0070;
-    --title-color: #000028;
+    --hero-title-accent-color: var(--accent-color);
+    --title-color: var(--bg-color);
     --main-font-color: #F1B2CE;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-image: url(/images/cover-image-dark.png);
-        --bg-color: #000028;
-        --accent-color1: #FF0070;
-        --accent-color2: #FF0070;
-        --accent-color2-light: rgba(255, 0, 112, 40%);
-        --hero-title-color: #DB00FF;
-        --hero-title-accent-color: #FF0070;
-        --title-color: #000028;
-        --main-font-color: #F1B2CE;
+    --bg-image: url(../images/cover-image-dark.png);
+    --bg-color: #000028;
+    --accent-color: #FF0070;
+    --accent-color-light-theme-special: var(--accent-color);
+    --accent-color-light-theme-special-bright: rgba(255, 0, 112, 40%);
+    --hero-title-color: #DB00FF;
+    --hero-title-accent-color: var(--accent-color);
+    --title-color: var(--bg-color);
+    --main-font-color: #F1B2CE;
     }
 }
