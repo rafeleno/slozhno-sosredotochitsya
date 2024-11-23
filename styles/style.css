@@ -216,7 +216,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: var(--gap-s);
-    margin-bottom: var(--mb-l);
+    margin-bottom: var(--margin-bottom-l);
 
     @media (width <= 500px) {
         grid-template-columns: 1fr;
@@ -238,7 +238,7 @@
 }
 
 .info-block-title {
-    margin-bottom: var(--mb-xs);
+    margin-bottom: var(--margin-bottom-xs);
     font-size: var(--main-font-size);
     color: var(--accent-color-light-theme-special);
 }
@@ -292,7 +292,7 @@
 }
 
 .gallery {
-    margin-bottom: var(--mb-m);
+    margin-bottom: var(--margin-bottom-m);
 }
 
 .gallery-content-wrapper {

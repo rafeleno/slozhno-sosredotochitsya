@@ -18,9 +18,9 @@
     --gap-xs: 10px;
     --gap-s: 20px;
     --title-offset: -20px;
-    --mb-xs: 20px;
-    --mb-m: 60px;
-    --mb-l: 80px;
+    --margin-bottom-xs: 20px;
+    --margin-bottom-m: 60px;
+    --margin-bottom-l: 80px;
 
     @media (width < 768px) {
         --wrapper-padding: 0 10px;

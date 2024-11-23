@@ -42,11 +42,11 @@ a {
   line-height: inherit;
 }
 
-.mb-xs {
+.margin-bottom-xs {
     margin-bottom: 10px;
 }
 
-.mb-s {
+.margin-bottom-s {
     margin-bottom: 20px;
 
     @media (width <= 500px) {
