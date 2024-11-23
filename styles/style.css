@@ -215,7 +215,7 @@
 .info-block {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: var(--gap-xs);
+    column-gap: var(--gap-s);
     margin-bottom: var(--mb-l);
 
     @media (width <= 500px) {
@@ -238,7 +238,6 @@
 }
 
 .info-block-title {
-    width: 99%;
     margin-bottom: var(--mb-xs);
     font-size: var(--main-font-size);
     color: var(--accent-color-light-theme-special);
