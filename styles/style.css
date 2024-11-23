@@ -87,6 +87,8 @@
     top: 22px;
     right: 49px;
 
+    /* смотрите скриншот https://disk.yandex.com/i/LvXQouMCoe-Xvw */
+
     @media (width <= 500px) {
         right: 40px;
         top: 13px;
@@ -121,10 +123,15 @@
 .header__theme-menu-list {
     display: flex;
     flex-direction: row;
-    gap: var(--gap-xs);
+    gap: 30px;
 
     @media (width <= 768px) {
         flex-direction: column;
+        margin-right: 20px;
+    }
+
+    @media (width <= 500px) {
+        margin-right: 10px;
     }
 }
 
@@ -132,16 +139,24 @@
     color: var(--accent-color-light-theme-special);
     background: none;
     border: none;
+    text-transform: lowercase;
+    /* смотреть скриншот - https://disk.yandex.com/i/ns249ehtMbdXDA */
 }
 
 .header__theme-menu-button:hover {
     outline: 1px solid var(--accent-color-light-theme-special-bright);
+    /* Толщина рамки по макету -  */
     outline-offset: 2px;
 }
 
 .header__theme-menu-button:focus-visible {
     outline: none;
     border-bottom: 1px solid var(--accent-color-light-theme-special);
+}
+
+.header__theme-menu-button:focus-visible {
+    outline: none;
+    outline-offset: 0;
 }
 
 .header__theme-menu-button_active {
