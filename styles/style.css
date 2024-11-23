@@ -8,7 +8,7 @@
     background-color: var(--bg-color);
     font-size: var(--main-font-size);
     font-family: var(--main-font-family);
-    color: var(--main-font-color)
+    color: var(--main-font-color);
 }
 
 .header {
@@ -45,7 +45,7 @@
     bottom: 20px;
     left: 20px;
 
-    @media (width < 768px) {
+    @media (width <= 768px) {
         bottom: 0;
         left: 0;
     }
@@ -70,7 +70,7 @@
     top: 20px;
     right: 20px;
 
-    @media (width < 768px) {
+    @media (width <= 768px) {
         top: 0;
         right: 0;
     }
@@ -80,6 +80,7 @@
         right: 10px;
     }
 }
+
 .header__accent-element {
     position: absolute;
     text-transform: uppercase;
@@ -128,6 +129,7 @@
     @media (width <= 768px) {
         flex-direction: column;
         margin-right: 20px;
+        gap: 10px;
     }
 
     @media (width <= 500px) {
@@ -140,7 +142,6 @@
     background: none;
     border: none;
     text-transform: lowercase;
-    /* смотреть скриншот - https://disk.yandex.com/i/ns249ehtMbdXDA */
 }
 
 .header__theme-menu-button:hover {
@@ -154,13 +155,14 @@
     border-bottom: 1px solid var(--accent-color-light-theme-special);
 }
 
-.header__theme-menu-button:focus-visible {
+.header__theme-menu-button:focus {
     outline: none;
     outline-offset: 0;
 }
 
 .header__theme-menu-button_active {
     outline: 1px solid var(--accent-color-light-theme-special);
+    /* смотреть скриншот - https://disk.yandex.ru/i/f2TctWh8sxTpHA */
     outline-offset: 2px;
     pointer-events: none;
 }
@@ -176,13 +178,14 @@
 }
 
 .title-decor {
-    color: var(--main-color);
+    color: var(--title-color);
     background-color: var(--accent-color);
 }
 
 .hero-title {
     grid-column-start: 1;
     grid-column-end: 5;
+    /* смотреть скриншот - https://disk.yandex.ru/a/0fW27JNk-w7VGA */
     grid-row: 2 / auto;
     text-shadow: 4px 4px 0 var(--hero-title-accent-color);
     translate: var(--title-offset);
@@ -204,20 +207,15 @@
     line-height: var(--main-line-height);
     color: var(--title-color);
 
-    @media (width <= 768px) {
-        align-self: center;
-    }
-
     @media (width <= 500px) {
         grid-column: 1 / 5;
-        align-self: center;
     }
 }
 
 .info-block {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: var(--gap-s);
+    column-gap: var(--gap-xs);
     margin-bottom: var(--mb-l);
 
     @media (width <= 500px) {
@@ -240,6 +238,7 @@
 }
 
 .info-block-title {
+    width: 99%;
     margin-bottom: var(--mb-xs);
     font-size: var(--main-font-size);
     color: var(--accent-color-light-theme-special);
@@ -271,7 +270,6 @@
 }
 
 .info-block-content-item-title {
-    color: var(--title-color);
     font-size: var(--main-font-size);
 }
 
@@ -287,6 +285,11 @@
 .info-block-text__link:focus-visible {
     outline: none;
     border: 1px solid var(--main-font-color);
+}
+
+.info-block-text__link:focus {
+    outline: none;
+    outline-offset: 0;
 }
 
 .gallery {
@@ -310,9 +313,6 @@
     @media (width <= 500px) {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto;
-        grid-gap: var(--gap-xs);
-        grid-column-gap: var(--gap-xs);
-        grid-row-gap: var(--gap-xs);
     }
 }
 
@@ -325,52 +325,39 @@
 .gallery-list-item-1 {
     grid-column: 1 / 3;
     grid-row: 1 / auto;
-
-    @media (width <= 500px) {
-        grid-column: auto;
-        grid-row: auto;
-    }
 }
 
 .gallery-list-item-2 {
     grid-column: 3 / 4;
     grid-row: 1 / 3;
-
-    @media (width <= 500px) {
-        grid-column: auto;
-        grid-row: auto;
-    }
 }
 
 .gallery-list-item-3 {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
-
-    @media (width <= 500px) {
-        grid-column: auto;
-        grid-row: auto;
-    }
 }
 
 .gallery-list-item-4 {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-
-    @media (width <= 500px) {
-        grid-column: auto;
-        grid-row: auto;
-    }
 }
 
 .gallery-list-item-5 {
     grid-column: 2 / 4;
     grid-row: 3 / 3;
+}
 
+.gallery-list-item-1,
+.gallery-list-item-2,
+.gallery-list-item-3,
+.gallery-list-item-4,
+.gallery-list-item-5 {
     @media (width <= 500px) {
         grid-column: auto;
         grid-row: auto;
     }
-}
+} /*   почему-то если задать этот стиль не каждой по отдельности,
+       а по обзему классу то сетка напрочь ломается      */
 
 .footer {
     display: flex;
@@ -378,6 +365,20 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.footer.decorated-corners::before {
+    @media (500px <= width <= 768px) {
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+.footer.decorated-corners::after {
+    @media (500px <= width <= 768px) {
+        top: 20px;
+        right: 20px;
+    }
 }
 
 .footer-title {

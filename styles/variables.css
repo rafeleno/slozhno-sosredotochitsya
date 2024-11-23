@@ -3,16 +3,11 @@
   и их переопределение под различные устройства
 */
 :root {
-    --bg-image: url(/images/cover-image-dark.png);
+    --bg-image: url(../images/cover-image-dark.png);
     --bg-color: #000028;
-    --accent-color1: #FF0070;
-    --accent-color2: #FF0070;
-    --accent-color2-light: rgba(255, 0, 112, 40%);
-    --image-1: url(/images/sunset.png);
-    --image-2: url(/images/ice-cream.png);
-    --image-3: url(/images/tape.png);
-    --image-4: url(/images/books.png);
-    --image-5: url(/images/street.png);
+    --accent-color: #FF0070;
+    --accent-color-light-theme-special: #FF0070;
+    --accent-color-light-theme-special-bright: rgba(255, 0, 112, 40%);
     --hero-text-accent-color: #DB00FF;
     --title-color: #000028;
     --main-font-size: 18px;
