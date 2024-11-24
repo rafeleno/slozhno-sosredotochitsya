@@ -249,7 +249,7 @@
 .info-block {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: var(--gap-xs);
+    column-gap: var(--gap-s);
     margin-bottom: var(--margin-bottom-l);
 
     @media (width <= 500px) {
