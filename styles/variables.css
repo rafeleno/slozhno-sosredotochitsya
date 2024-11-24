@@ -28,6 +28,6 @@
         }
 
     @media (width < 500px) {
-        --mb-l: 50px;
+        --margin-bottom-l: 50px;
         }
 }
