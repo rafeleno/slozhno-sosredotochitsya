@@ -61,8 +61,3 @@ a {
 .text-regular {
     font-weight: 400;
 }
-
-.wrapper {
-    padding: var(--wrapper-padding);
-    margin: auto;
-}

@@ -31,9 +31,9 @@
         --hero-title-accent-color: #FF0070;
         --title-color: var(--accent-color-light-theme-special);
         --main-font-color: var(--accent-color-light-theme-special);
+    }
 
-        .header__accent-element {
-            display: none;
-        }
+    .page.theme_auto .header__accent-element {
+        display: none;
     }
 }

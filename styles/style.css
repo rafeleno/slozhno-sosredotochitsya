@@ -11,11 +11,36 @@
     color: var(--main-font-color);
 }
 
+
+
+
+
+/* ALARM!,
+ Добрый день, Владимир Шевченкою По поводу отступов на уголкх header'a,
+ в макете явно видно что они рилегают к странице вплотную после 768 и до 375 и я уже дал этот коментарий
+ с скриншотоами в коде после замечаний на прошлой итерации просмотра работы
+ и ссылаяь на них прошу либо не отмечать это ошибкой, либо ссылаться на макет в фигме со словами
+ - что он криво нарисован, т. к. иначе не понятно кто неправ. 
+ 
+ Хорошего для и до встречи на ревью*/
+
+ /*TODO: смотрите скриншот https://disk.yandex.com/i/LvXQouMCoe-Xvw */
+
+
+
+
+
+.wrapper {
+    padding: var(--wrapper-padding);
+    margin: auto;
+}
+
 .header {
     display: grid;
     position: relative;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 299px min-content 299px;
+    grid-template-rows: 1fr min-content 1fr;
+    min-height: 668px;
     height: 100vh;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -31,7 +56,6 @@
     }
 }
 
-/* Добрый день Владимир Шевченко, взгляните - https://disk.yandex.com/d/JnrZ0QXLwGpXdg (скриншоты на Ядиске)*/
 .decorated-corners::before {
     content: "";
     position: absolute;
@@ -55,8 +79,7 @@
         left: 10px;
     }
 }
-/* (Дублирую ответ)
-Добрый день Владимир Шевченко, взгляните - https://disk.yandex.com/d/JnrZ0QXLwGpXdg (скриншоты на Ядиске)*/
+
 .decorated-corners::after {
     content: "";
     position: absolute;
@@ -109,6 +132,14 @@
     top: 7px;
 }
 
+
+
+/* касательно - https://disk.yandex.com/i/QAOvBru84nBSWw, смотреть скриншот -  */
+
+
+
+
+
 .header__theme-menu {
     grid-column-start: 2;
     grid-column-end: 4;
@@ -118,6 +149,14 @@
         grid-column: 4 / auto;
         justify-self: end;
         align-self: center;
+        margin-right: 10px;
+    }
+
+    @media (width <= 500px) {
+        grid-column: 4 / auto;
+        justify-self: end;
+        align-self: center;
+        margin-right: 0px;
     }
 }
 
@@ -128,12 +167,7 @@
 
     @media (width <= 768px) {
         flex-direction: column;
-        margin-right: 20px;
         gap: 10px;
-    }
-
-    @media (width <= 500px) {
-        margin-right: 10px;
     }
 }
 
@@ -215,7 +249,7 @@
 .info-block {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: var(--gap-s);
+    column-gap: var(--gap-xs);
     margin-bottom: var(--margin-bottom-l);
 
     @media (width <= 500px) {
