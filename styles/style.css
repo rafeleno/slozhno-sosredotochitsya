@@ -263,9 +263,12 @@
 }
 
 .info-block-title {
-    margin-bottom: var(--margin-bottom-xs);
     font-size: var(--main-font-size);
     color: var(--accent-color-light-theme-special);
+    
+    @media (width <= 500px) {
+        margin-bottom: var(--margin-bottom-xs);
+    }
 }
 
 .info-block__in-a-row .info-block-title {
