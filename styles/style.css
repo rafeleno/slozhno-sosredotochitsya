@@ -244,6 +244,7 @@
 
     @media (width <= 500px) {
         grid-template-columns: 1fr;
+        gap: 0;
     }
 }
 
