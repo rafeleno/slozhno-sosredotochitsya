@@ -153,30 +153,31 @@
 .header__theme-menu-list {
     display: flex;
     flex-direction: row;
-    gap: 25px;
+    gap: 10px;
 
     @media (width <= 768px) {
         flex-direction: column;
-        gap: 11px;
     }
 }
 
 .header__theme-menu-button {
+    /* Ошибка в ширине кнопки не была указана ни в одной из предыдущих итераций. */
     color: var(--accent-color-light-theme-special);
+    line-height: 100%;
     background: none;
+    padding: 1px 13px 5px;  /* "5px" --так ближе к макету, иначе текст очень сильно уезжает вниз */
     border: none;
     text-transform: lowercase;
+    outline-offset: 1px;
 }
 
 .header__theme-menu-button:hover {
-    outline: 1px solid var(--accent-color-light-theme-special-bright);
     /* Толщина рамки по макету -  */
-    outline-offset: 2px;
+    outline: 1px solid var(--accent-color-light-theme-special-bright);
 }
 
 .header__theme-menu-button:focus-visible {
-    outline: none;
-    border-bottom: 1px solid var(--accent-color-light-theme-special);
+    outline: 1px solid var(--accent-color-light-theme-special);
 }
 
 .header__theme-menu-button:focus {
@@ -187,7 +188,6 @@
 .header__theme-menu-button_active {
     outline: 1px solid var(--accent-color-light-theme-special);
     /* смотреть скриншот - https://disk.yandex.ru/i/f2TctWh8sxTpHA */
-    outline-offset: 2px;
     pointer-events: none;
 }
 
@@ -239,8 +239,13 @@
 .info-block {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 1.25rem;
+    row-gap: 1.25rem;
+    column-gap: 10px;
     margin-bottom: var(--margin-bottom-l);
+
+    @media (768 <= width <= 500px) {
+        gap: 1.25rem;
+    }
 
     @media (width <= 500px) {
         grid-template-columns: 1fr;
